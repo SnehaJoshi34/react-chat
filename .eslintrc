@@ -1,0 +1,35 @@
+{
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "extends": ["eslint:recommended"],
+      "overrides": [
+        {
+          "files": ["./overrides.js"], // A list of files to which you want to apply additional ESLint configurations
+          "extends": ["some-config"] // Additional ESLint configurations for these files
+          // Other ESLint rule overrides for the specified files can be added here
+        }
+      ]
+    }
+  ],
+  // Other ESLint configurations for the rest of your project
+
+  "extends": ["eslint:recommended", "airbnb", "prettier"],
+  "plugins": ["react-hooks"],
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-plusplus": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": [0],
+    "react/jsx-props-no-spreading": [0],
+    "import/prefer-default-export": [0],
+    "react/no-array-index-key": [0],
+    "react/no-danger": [0],
+    "no-param-reassign": [0],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
